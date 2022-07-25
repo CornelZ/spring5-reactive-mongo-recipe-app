@@ -1,14 +1,14 @@
 package guru.springframework.commands;
 
+import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
-import java.math.BigDecimal;
-
-/** Created by jt on 6/21/17. */
 @Getter
 @Setter
+@Accessors(chain = true)
 @NoArgsConstructor
 public class IngredientCommand {
   private String id;
