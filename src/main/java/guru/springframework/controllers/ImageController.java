@@ -40,7 +40,7 @@ public class ImageController {
   public String handleImagePost(
       @PathVariable String id, @RequestParam("imagefile") MultipartFile file) {
 
-    imageService.saveImageFile(id, file);
+    imageService.saveImageFile(id, file).block();
 
     return "redirect:/recipe/" + id + "/show";
   }
