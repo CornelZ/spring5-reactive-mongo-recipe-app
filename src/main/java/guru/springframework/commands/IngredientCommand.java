@@ -1,6 +1,9 @@
 package guru.springframework.commands;
 
 import java.math.BigDecimal;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,9 +14,15 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @NoArgsConstructor
 public class IngredientCommand {
+
   private String id;
   private String recipeId;
-  private String description;
+
+  @NotBlank private String description;
+
+  @NotNull
+  @Min(1)
   private BigDecimal amount;
-  private UnitOfMeasureCommand uom;
+
+  @NotNull private UnitOfMeasureCommand uom;
 }

@@ -2,7 +2,6 @@ package guru.springframework.controllers;
 
 import guru.springframework.commands.RecipeCommand;
 import guru.springframework.services.RecipeService;
-import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -46,7 +45,7 @@ public class RecipeController {
 
   @GetMapping("recipe/{id}/update")
   public String updateRecipe(@PathVariable String id, Model model) {
-    model.addAttribute("recipe", recipeService.findCommandById(id));
+    model.addAttribute("recipe", recipeService.findCommandById(id).log());
     return RECIPE_RECIPEFORM_URL;
   }
 
