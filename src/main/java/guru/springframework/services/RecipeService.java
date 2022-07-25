@@ -5,18 +5,16 @@ import guru.springframework.domain.Recipe;
 
 import java.util.Set;
 
-/**
- * Created by jt on 6/13/17.
- */
+/** Created by jt on 6/13/17. */
 public interface RecipeService {
 
-    Set<Recipe> getRecipes();
+  Set<Recipe> getRecipes();
 
-    Recipe findById(String id);
+  Recipe findById(String id);
 
-    RecipeCommand findCommandById(String id);
+  RecipeCommand findCommandById(String id);
 
-    RecipeCommand saveRecipeCommand(RecipeCommand command);
+  RecipeCommand saveRecipeCommand(RecipeCommand command);
 
-    void deleteById(String idToDelete);
+  void deleteById(String idToDelete);
 }
