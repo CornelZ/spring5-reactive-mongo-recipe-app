@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.2.2.RELEASE'
+		springBootVersion = '2.0.0.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -19,7 +19,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'jacoco'
 
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 11
+sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
